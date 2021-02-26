@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 import { connect } from 'react-redux';
-import actions from '../../redux/phonebook/phonebookActions';
+import * as actions from '../../redux/phonebook/phonebookActions';
 
 function Filter({ filter, onChange }) {
   return (

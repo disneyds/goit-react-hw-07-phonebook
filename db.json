@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "name": "qwe",
+      "number": "312",
+      "id": 2
+    },
+    {
+      "name": "asdasd",
+      "number": "123123",
+      "id": 3
+    },
+    {
+      "name": "qweq",
+      "number": "",
+      "id": 4
+    }
+  ]
+}

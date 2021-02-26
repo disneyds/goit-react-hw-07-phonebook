@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import s from './ContactsList.module.css';
 import defImg from './defAvaCir.png';
-import phonebookActions from '../../redux/phonebook/phonebookActions';
+import { deleteContact } from '../../redux/phonebook/phonebookOperations';
 
 function ContactsList({ contacts, onDelete }) {
   return (
@@ -45,7 +45,7 @@ const mapStateToProps = ({ phonebook }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onDelete: id => dispatch(phonebookActions.deleteContact(id)),
+  onDelete: id => dispatch(deleteContact(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsList);

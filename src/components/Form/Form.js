@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import s from './Form.module.css';
-import phonebookActions from '../../redux/phonebook/phonebookActions';
+import { addContact } from '../../redux/phonebook/phonebookOperations';
 import { CSSTransition } from 'react-transition-group';
 import Alert from 'components/Alert/Alert';
 
@@ -90,8 +90,7 @@ const mapStateToProps = state => ({
   contacts: state.phonebook.contacts,
 });
 const mapDispatchToProps = dispatch => ({
-  handleSubmit: ({ name, number }) =>
-    dispatch(phonebookActions.addContact(name, number)),
+  handleSubmit: ({ name, number }) => dispatch(addContact(name, number)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
