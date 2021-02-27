@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-07-phonebook/static/css/main.7662c6bb.chunk.css",
+    "main.js": "/goit-react-hw-07-phonebook/static/js/main.fca20abc.chunk.js",
+    "main.js.map": "/goit-react-hw-07-phonebook/static/js/main.fca20abc.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-07-phonebook/static/js/runtime-main.5b789223.js",
+    "runtime-main.js.map": "/goit-react-hw-07-phonebook/static/js/runtime-main.5b789223.js.map",
+    "static/js/2.2e186b5f.chunk.js": "/goit-react-hw-07-phonebook/static/js/2.2e186b5f.chunk.js",
+    "static/js/2.2e186b5f.chunk.js.map": "/goit-react-hw-07-phonebook/static/js/2.2e186b5f.chunk.js.map",
+    "index.html": "/goit-react-hw-07-phonebook/index.html",
+    "static/css/main.7662c6bb.chunk.css.map": "/goit-react-hw-07-phonebook/static/css/main.7662c6bb.chunk.css.map",
+    "static/js/2.2e186b5f.chunk.js.LICENSE.txt": "/goit-react-hw-07-phonebook/static/js/2.2e186b5f.chunk.js.LICENSE.txt",
+    "static/media/defAvaCir.d011667d.png": "/goit-react-hw-07-phonebook/static/media/defAvaCir.d011667d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5b789223.js",
+    "static/js/2.2e186b5f.chunk.js",
+    "static/css/main.7662c6bb.chunk.css",
+    "static/js/main.fca20abc.chunk.js"
+  ]
+}
