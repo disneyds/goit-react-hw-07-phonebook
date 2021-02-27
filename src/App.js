@@ -4,9 +4,9 @@ import Container from './components/Container/Container';
 import Form from './components/Form/Form';
 import ContactsList from './components/ContactsList/ContactsList';
 import Filter from './components/Filter/Filter';
-import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { fetchContacts } from 'redux/phonebook/phonebookOperations';
+import Title from 'components/Title/Title';
 
 class App extends Component {
   componentDidMount() {
@@ -17,26 +17,11 @@ class App extends Component {
     return (
       <Container>
         <div className="phoneBook">
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={500}
-            classNames="Title"
-            unmountOnExit
-          >
-            <h1>Контакты</h1>
-          </CSSTransition>
+          <Title />
 
           <Form />
 
-          <CSSTransition
-            in={this.props.contacts.length > 1}
-            timeout={250}
-            classNames="Filter"
-            unmountOnExit
-          >
-            <Filter />
-          </CSSTransition>
+          <Filter />
 
           <ContactsList />
         </div>
@@ -45,12 +30,8 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  contacts: state.phonebook.contacts,
-});
-
 const mapDispatchToProps = dispatch => ({
   fetchContacts: () => dispatch(fetchContacts()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

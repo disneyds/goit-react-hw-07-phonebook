@@ -13,18 +13,26 @@ import {
   changeFilter,
 } from './phonebookActions';
 
-const contactsReducer = createReducer([], {
+const initialState = {
+  phonebook: {
+    contacts: [],
+    filter: '',
+    loading: false,
+  },
+};
+
+const contactsReducer = createReducer(initialState.phonebook.contacts, {
   [fetchContactSuccess]: (_, { payload }) => payload,
   [addContactSuccess]: (state, { payload }) => [payload, ...state],
   [deleteContactSuccess]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
 });
 
-const filterReducer = createReducer('', {
+const filterReducer = createReducer(initialState.phonebook.filter, {
   [changeFilter]: (_, { payload }) => payload,
 });
 
-const loading = createReducer(false, {
+const loading = createReducer(initialState.phonebook.loading, {
   [fetchContactRequest]: () => true,
   [fetchContactSuccess]: () => false,
   [fetchContactError]: () => false,
