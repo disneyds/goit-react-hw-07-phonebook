@@ -18,6 +18,7 @@ const initialState = {
     contacts: [],
     filter: '',
     loading: false,
+    error: null,
   },
 };
 
@@ -44,8 +45,15 @@ const loading = createReducer(initialState.phonebook.loading, {
   [deleteContactError]: () => false,
 });
 
+const error = createReducer(initialState.phonebook.error, {
+  [fetchContactError]: (_, { payload }) => payload,
+  [addContactError]: (_, { payload }) => payload,
+  [deleteContactError]: (_, { payload }) => payload,
+});
+
 export default combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
   loading,
+  error,
 });
